@@ -16,13 +16,6 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="projectionbutton">
-      <property name="text">
-       <string>2D projection</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="cylindersbutton">
       <property name="text">
        <string>Cylinders</string>

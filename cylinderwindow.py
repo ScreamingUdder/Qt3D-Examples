@@ -95,9 +95,9 @@ class OrbitTransformController(QObject):
     radius = Property(float, getRadius, setRadius, notify=radiusChanged)
 
 
-class Window(Qt3DExtras.Qt3DWindow):
+class CylinderWindow(Qt3DExtras.Qt3DWindow):
     def __init__(self):
-        super(Window, self).__init__()
+        super(CylinderWindow, self).__init__()
 
         # Camera
         self.camera().lens().setPerspectiveProjection(45, 16 / 9, 0.1, 1000)
