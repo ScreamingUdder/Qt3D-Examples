@@ -38,6 +38,17 @@ class CylinderDialog(Ui_cyldialog):
         self.horizontalLayout.replaceWidget(
             self.widget, QWidget.createWindowContainer(self.window)
         )
+        self.pushButton.clicked.connect(self.add_cylinder)
+
+    def add_cylinder(self):
+        self.window.add_cylinder(
+            int(self.radiusLineEdit.text()),
+            int(self.radiusLineEdit.text()),
+            int(self.xLineEdit.text()),
+            int(self.yLineEdit.text()),
+            int(self.zLineEdit.text()),
+        )
+        print("Cylinder added.")
 
 
 class SphereDialog(Ui_sphdialog):
