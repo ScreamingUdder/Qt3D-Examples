@@ -1,14 +1,15 @@
 from PySide2.QtWidgets import QApplication, QMainWindow
 from PySide2 import QtCore
 import sys
+from ui.mainwindow import Ui_MainWindow
 
 
-class MainWindow:
+class MainWindow(Ui_MainWindow):
     def __init__(self):
-        pass
+        super().__init__()
 
     def setupUi(self, MainWindow):
-        pass
+        super().setupUi(MainWindow)
 
 
 if __name__ == "__main__":
