@@ -5,20 +5,19 @@ from ui.mainwindow import Ui_MainWindow
 from ui.cyldialog import Ui_cyldialog
 from ui.projdialog import Ui_projdialog
 from ui.sphdialog import Ui_sphdialog
+from projection import Window
 
 
 class MainWindow(Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.projdialog = QDialog()
+        self.projdialog = Window()
 
         self.cylinderdialog = QDialog()
         self.spheredialog = QDialog()
 
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
-        self.projdialog.ui = ProjectionDialog()
-        self.projdialog.ui.setupUi(self.projdialog)
         self.cylinderdialog.ui = CylinderDialog()
         self.cylinderdialog.ui.setupUi(self.cylinderdialog)
         self.spheredialog.ui = SphereDialog()
@@ -27,11 +26,6 @@ class MainWindow(Ui_MainWindow):
         self.projectionbutton.clicked.connect(self.projdialog.show)
         self.cylindersbutton.clicked.connect(self.cylinderdialog.show)
         self.spheres.clicked.connect(self.spheredialog.show)
-
-
-class ProjectionDialog(Ui_projdialog):
-    def __init__(self):
-        super(ProjectionDialog, self).__init__()
 
 
 class CylinderDialog(Ui_cyldialog):
