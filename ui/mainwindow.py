@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'mainwindow.ui',
 # licensing of 'mainwindow.ui' applies.
 #
-# Created: Fri May 31 12:29:20 2019
+# Created: Fri May 31 14:42:11 2019
 #      by: pyside2-uic  running on PySide2 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -21,6 +21,9 @@ class Ui_MainWindow(object):
         self.cylindersbutton = QtWidgets.QPushButton(self.centralwidget)
         self.cylindersbutton.setObjectName("cylindersbutton")
         self.verticalLayout.addWidget(self.cylindersbutton)
+        self.lotsofcylindersbutton = QtWidgets.QPushButton(self.centralwidget)
+        self.lotsofcylindersbutton.setObjectName("lotsofcylindersbutton")
+        self.verticalLayout.addWidget(self.lotsofcylindersbutton)
         self.spheres = QtWidgets.QPushButton(self.centralwidget)
         self.spheres.setObjectName("spheres")
         self.verticalLayout.addWidget(self.spheres)
@@ -39,5 +42,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "Qt3D examples", None, -1))
         self.cylindersbutton.setText(QtWidgets.QApplication.translate("MainWindow", "Cylinders", None, -1))
+        self.lotsofcylindersbutton.setText(QtWidgets.QApplication.translate("MainWindow", "Lots of cylinders", None, -1))
         self.spheres.setText(QtWidgets.QApplication.translate("MainWindow", "Spheres", None, -1))
 

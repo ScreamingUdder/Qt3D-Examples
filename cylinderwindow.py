@@ -85,6 +85,8 @@ class CylinderWindow(Qt3DExtras.Qt3DWindow):
         cylinderMesh = Qt3DExtras.QCylinderMesh()
         cylinderMesh.setRadius(radius)
         cylinderMesh.setLength(length)
+        # cylinderMesh.setSlices(1)
+        # cylinderMesh.setRings(1)
         cylinderTransform = Qt3DCore.QTransform()
         cylinderTransform.setTranslation(QVector3D(x, y, z))
 

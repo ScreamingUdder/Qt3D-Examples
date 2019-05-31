@@ -17,15 +17,20 @@ class MainWindow(Ui_MainWindow):
         super().setupUi(MainWindow)
         self.cylinderdialog = QDialog()
         self.spheredialog = QDialog()
+        self.lotsofcylindersdialog = QDialog()
 
         self.cylinderdialog.ui = CylinderDialog()
         self.cylinderdialog.ui.setupUi(self.cylinderdialog)
+
+        self.lotsofcylindersdialog.ui = LotsOfCylindersDialog()
+        self.lotsofcylindersdialog.ui.setupUi(self.lotsofcylindersdialog)
 
         self.spheredialog.ui = SphereDialog()
         self.spheredialog.ui.setupUi(self.spheredialog)
 
         self.cylindersbutton.clicked.connect(self.cylinderdialog.show)
         self.spheres.clicked.connect(self.spheredialog.show)
+        self.lotsofcylindersbutton.clicked.connect(self.lotsofcylindersdialog.show)
 
 
 class CylinderDialog(Ui_cyldialog):
@@ -48,6 +53,40 @@ class CylinderDialog(Ui_cyldialog):
             int(self.yLineEdit.text()),
             int(self.zLineEdit.text()),
         )
+        print("Cylinder added.")
+
+
+class LotsOfCylindersDialog(Ui_cyldialog):
+    def __init__(self):
+        super().__init__()
+        self.window = CylinderWindow()
+
+    def setupUi(self, CylinderDialog):
+        super().setupUi(CylinderDialog)
+        self.horizontalLayout.replaceWidget(
+            self.widget, QWidget.createWindowContainer(self.window)
+        )
+        self.pushButton.clicked.connect(self.add_cylinder)
+
+    def add_cylinder(self):
+        x = 20
+        y = 256
+
+        radius = 0.5
+        length = 0.5
+        translation_distance = 1
+
+        for i in range(x):
+            for j in range(y):
+                self.window.add_cylinder(
+                    radius,
+                    length,
+                    i * translation_distance * 2,
+                    j * translation_distance,
+                    0,
+                )
+
+        # self.window.add_cylinder()
         print("Cylinder added.")
 
 
