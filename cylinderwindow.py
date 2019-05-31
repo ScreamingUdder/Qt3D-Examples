@@ -120,43 +120,10 @@ class CylinderWindow(Qt3DExtras.Qt3DWindow):
         # Material
         self.material = Qt3DExtras.QPhongMaterial(self.rootEntity)
 
-        # Torus
-        self.torusEntity = Qt3DCore.QEntity(self.rootEntity)
-        self.torusMesh = Qt3DExtras.QTorusMesh()
-        self.torusMesh.setRadius(5)
-        self.torusMesh.setMinorRadius(1)
-        self.torusMesh.setRings(100)
-        self.torusMesh.setSlices(20)
 
-        self.torusTransform = Qt3DCore.QTransform()
-        self.torusTransform.setScale3D(QVector3D(1.5, 1, 0.5))
-        self.torusTransform.setRotation(
-            QQuaternion.fromAxisAndAngle(QVector3D(1, 0, 0), 45)
-        )
-
-        self.torusEntity.addComponent(self.torusMesh)
-        self.torusEntity.addComponent(self.torusTransform)
-        self.torusEntity.addComponent(self.material)
-
-        # Sphere
-        self.sphereEntity = Qt3DCore.QEntity(self.rootEntity)
-        self.sphereMesh = Qt3DExtras.QSphereMesh()
-        self.sphereMesh.setRadius(3)
-
-        self.sphereTransform = Qt3DCore.QTransform()
-        self.controller = OrbitTransformController(self.sphereTransform)
-        self.controller.setTarget(self.sphereTransform)
-        self.controller.setRadius(20)
-
-        self.sphereRotateTransformAnimation = QPropertyAnimation(self.sphereTransform)
-        self.sphereRotateTransformAnimation.setTargetObject(self.controller)
-        self.sphereRotateTransformAnimation.setPropertyName(b"angle")
-        self.sphereRotateTransformAnimation.setStartValue(0)
-        self.sphereRotateTransformAnimation.setEndValue(360)
-        self.sphereRotateTransformAnimation.setDuration(10000)
-        self.sphereRotateTransformAnimation.setLoopCount(-1)
-        self.sphereRotateTransformAnimation.start()
-
-        self.sphereEntity.addComponent(self.sphereMesh)
-        self.sphereEntity.addComponent(self.sphereTransform)
-        self.sphereEntity.addComponent(self.material)
+        self.cylinderEntity = Qt3DCore.QEntity(self.rootEntity)
+        self.cylinderMesh = Qt3DExtras.QCylinderMesh()
+        self.cylinderMesh.setLength(10)
+        self.cylinderMesh.setRadius(5)
+        self.cylinderEntity.addComponent(self.cylinderMesh)
+        self.cylinderEntity.addComponent(self.material)
