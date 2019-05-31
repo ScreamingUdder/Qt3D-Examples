@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QApplication, QMainWindow
+from PySide2.QtWidgets import QApplication, QMainWindow, QDialog
 from PySide2 import QtCore
 import sys
 from ui.mainwindow import Ui_MainWindow
@@ -10,24 +10,38 @@ from ui.sphdialog import Ui_sphdialog
 class MainWindow(Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.projdialog = ProjectionDialog()
-        self.cylinderdialog = CylinderDialog()
-        self.spheredialog = SphereDialog()
+        self.projdialog = QDialog()
+
+        self.cylinderdialog = QDialog()
+        self.spheredialog = QDialog()
 
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
+        self.projdialog.ui = ProjectionDialog()
+        self.projdialog.ui.setupUi(self.projdialog)
+        self.cylinderdialog.ui = CylinderDialog()
+        self.cylinderdialog.ui.setupUi(self.cylinderdialog)
+        self.spheredialog.ui = SphereDialog()
+        self.spheredialog.ui.setupUi(self.spheredialog)
+
+        self.projectionbutton.clicked.connect(self.projdialog.show)
+        self.cylindersbutton.clicked.connect(self.cylinderdialog.show)
+        self.spheres.clicked.connect(self.spheredialog.show)
 
 
 class ProjectionDialog(Ui_projdialog):
-    pass
+    def __init__(self):
+        super(ProjectionDialog, self).__init__()
 
 
 class CylinderDialog(Ui_cyldialog):
-    pass
+    def __init__(self):
+        super(CylinderDialog, self).__init__()
 
 
 class SphereDialog(Ui_sphdialog):
-    pass
+    def __init__(self):
+        super(SphereDialog, self).__init__()
 
 
 if __name__ == "__main__":
