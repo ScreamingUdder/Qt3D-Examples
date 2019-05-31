@@ -36,6 +36,13 @@
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="lotsofspheresButton">
+      <property name="text">
+       <string>Lots of spheres</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">

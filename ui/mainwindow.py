@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'mainwindow.ui',
 # licensing of 'mainwindow.ui' applies.
 #
-# Created: Fri May 31 14:42:11 2019
+# Created: Fri May 31 15:20:03 2019
 #      by: pyside2-uic  running on PySide2 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,6 +27,9 @@ class Ui_MainWindow(object):
         self.spheres = QtWidgets.QPushButton(self.centralwidget)
         self.spheres.setObjectName("spheres")
         self.verticalLayout.addWidget(self.spheres)
+        self.lotsofspheresButton = QtWidgets.QPushButton(self.centralwidget)
+        self.lotsofspheresButton.setObjectName("lotsofspheresButton")
+        self.verticalLayout.addWidget(self.lotsofspheresButton)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 583, 19))
@@ -44,4 +47,5 @@ class Ui_MainWindow(object):
         self.cylindersbutton.setText(QtWidgets.QApplication.translate("MainWindow", "Cylinders", None, -1))
         self.lotsofcylindersbutton.setText(QtWidgets.QApplication.translate("MainWindow", "Lots of cylinders", None, -1))
         self.spheres.setText(QtWidgets.QApplication.translate("MainWindow", "Spheres", None, -1))
+        self.lotsofspheresButton.setText(QtWidgets.QApplication.translate("MainWindow", "Lots of spheres", None, -1))
 

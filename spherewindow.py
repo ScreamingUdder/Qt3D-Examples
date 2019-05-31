@@ -79,14 +79,6 @@ class SphereWindow(Qt3DExtras.Qt3DWindow):
         # Material
         self.material = Qt3DExtras.QPhongMaterial(self.rootEntity)
 
-        # Sphere
-        self.sphereEntity = Qt3DCore.QEntity(self.rootEntity)
-        self.sphereMesh = Qt3DExtras.QSphereMesh()
-        self.sphereMesh.setRadius(3)
-
-        self.sphereEntity.addComponent(self.sphereMesh)
-        self.sphereEntity.addComponent(self.material)
-
     def add_sphere(self, radius, x, y, z):
 
         sphereEntity = Qt3DCore.QEntity(self.rootEntity)
