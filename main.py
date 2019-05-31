@@ -100,6 +100,16 @@ class SphereDialog(Ui_sphdialog):
         self.horizontalLayout.replaceWidget(
             self.widget, QWidget.createWindowContainer(self.window)
         )
+        self.pushButton.clicked.connect(self.add_sphere)
+
+    def add_sphere(self):
+
+        self.window.add_sphere(
+            int(self.radiusLineEdit.text()),
+            int(self.xLineEdit.text()),
+            int(self.yLineEdit.text()),
+            int(self.zLineEdit.text()),
+        )
 
 
 if __name__ == "__main__":

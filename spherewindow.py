@@ -68,6 +68,10 @@ class SphereWindow(Qt3DExtras.Qt3DWindow):
 
         self.setRootEntity(self.rootEntity)
 
+        self.spheres = []
+        self.meshes = []
+        self.transforms = []
+
     def createScene(self):
         # Root entity
         self.rootEntity = Qt3DCore.QEntity()
@@ -82,3 +86,20 @@ class SphereWindow(Qt3DExtras.Qt3DWindow):
 
         self.sphereEntity.addComponent(self.sphereMesh)
         self.sphereEntity.addComponent(self.material)
+
+    def add_sphere(self, radius, x, y, z):
+
+        sphereEntity = Qt3DCore.QEntity(self.rootEntity)
+        sphereMesh = Qt3DExtras.QSphereMesh()
+        sphereMesh.setRadius(radius)
+
+        sphereTransform = Qt3DCore.QTransform()
+        sphereTransform.setTranslation(QVector3D(x, y, z))
+
+        sphereEntity.addComponent(sphereMesh)
+        sphereEntity.addComponent(self.material)
+        sphereEntity.addComponent(sphereTransform)
+
+        self.spheres.append(sphereEntity)
+        self.meshes.append(sphereMesh)
+        self.transforms.append(sphereTransform)
