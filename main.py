@@ -1,4 +1,3 @@
-from PySide2.QtGui import QWindow
 from PySide2.QtWidgets import QApplication, QMainWindow, QDialog, QWidget, QPushButton
 from PySide2 import QtCore
 import sys
@@ -113,9 +112,10 @@ class LotsOfCylindersDialog(Ui_Dialog):
                     i * translation_distance * 2,
                     j * translation_distance,
                     0,
+                    int(self.ringslineedit.text()),
+                    int(self.sliceslineedit.text()),
                 )
 
-        # self.window.add_cylinder()
         print("Cylinder added.")
 
 

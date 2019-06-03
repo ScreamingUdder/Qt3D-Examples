@@ -79,14 +79,14 @@ class CylinderWindow(Qt3DExtras.Qt3DWindow):
         # Material
         self.material = Qt3DExtras.QPhongMaterial(self.rootEntity)
 
-    def add_cylinder(self, radius, length, x, y, z):
+    def add_cylinder(self, radius, length, x, y, z, rings=5, slices=5):
 
         cylinderEntity = Qt3DCore.QEntity(self.rootEntity)
         cylinderMesh = Qt3DExtras.QCylinderMesh()
         cylinderMesh.setRadius(radius)
         cylinderMesh.setLength(length)
-        # cylinderMesh.setSlices(1)
-        # cylinderMesh.setRings(1)
+        cylinderMesh.setSlices(rings)
+        cylinderMesh.setRings(slices)
         cylinderTransform = Qt3DCore.QTransform()
         cylinderTransform.setTranslation(QVector3D(x, y, z))
 
