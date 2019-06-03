@@ -82,11 +82,14 @@ class SphereWindow(Qt3DExtras.Qt3DWindow):
     def add_sphere(self, radius, x, y, z, rings=20, slices=20):
 
         sphereEntity = Qt3DCore.QEntity(self.rootEntity)
+
+        # Mesh
         sphereMesh = Qt3DExtras.QSphereMesh()
         sphereMesh.setRadius(radius)
         sphereMesh.setRings(rings)
         sphereMesh.setSlices(slices)
 
+        # Transforms
         sphereTransform = Qt3DCore.QTransform()
         sphereTransform.setTranslation(QVector3D(x, y, z))
 
