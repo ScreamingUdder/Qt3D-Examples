@@ -53,11 +53,11 @@ class CylinderDialog(Ui_cyldialog):
 
     def add_cylinder(self):
         self.window.add_cylinder(
-            int(self.radiusLineEdit.text()),
-            int(self.radiusLineEdit.text()),
-            int(self.xLineEdit.text()),
-            int(self.yLineEdit.text()),
-            int(self.zLineEdit.text()),
+            self.radiusLineEdit.value(),
+            self.radiusLineEdit.value(),
+            self.xLineEdit.value(),
+            self.yLineEdit.value(),
+            self.zLineEdit.value(),
         )
         print("Cylinder added.")
 
@@ -77,10 +77,10 @@ class SphereDialog(Ui_sphdialog):
     def add_sphere(self):
 
         self.window.add_sphere(
-            int(self.radiusLineEdit.text()),
-            int(self.xLineEdit.text()),
-            int(self.yLineEdit.text()),
-            int(self.zLineEdit.text()),
+            self.radiusLineEdit.value(),
+            self.xLineEdit.value(),
+            self.yLineEdit.value(),
+            self.zLineEdit.value(),
         )
 
 
@@ -112,8 +112,8 @@ class LotsOfCylindersDialog(Ui_Dialog):
                     i * translation_distance * 2,
                     j * translation_distance,
                     0,
-                    int(self.ringslineedit.text()),
-                    int(self.sliceslineedit.text()),
+                    self.ringslineedit.value(),
+                    self.sliceslineedit.value(),
                 )
 
         print("Cylinder added.")

@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'lotsofcylinders.ui',
 # licensing of 'lotsofcylinders.ui' applies.
 #
-# Created: Thu Jun 13 12:30:19 2019
+# Created: Thu Jun 13 12:46:55 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,13 +30,15 @@ class Ui_Dialog(object):
         self.label = QtWidgets.QLabel(self.layoutWidget)
         self.label.setObjectName("label")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
-        self.ringslineedit = QtWidgets.QLineEdit(self.layoutWidget)
+        self.ringslineedit = QtWidgets.QSpinBox(self.layoutWidget)
+        self.ringslineedit.setProperty("value", 10)
         self.ringslineedit.setObjectName("ringslineedit")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.ringslineedit)
         self.label_2 = QtWidgets.QLabel(self.layoutWidget)
         self.label_2.setObjectName("label_2")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
-        self.sliceslineedit = QtWidgets.QLineEdit(self.layoutWidget)
+        self.sliceslineedit = QtWidgets.QSpinBox(self.layoutWidget)
+        self.sliceslineedit.setProperty("value", 10)
         self.sliceslineedit.setObjectName("sliceslineedit")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.sliceslineedit)
         self.pushButton = QtWidgets.QPushButton(self.layoutWidget)
@@ -51,8 +53,8 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(QtWidgets.QApplication.translate("Dialog", "Dialog", None, -1))
         self.groupBox.setTitle(QtWidgets.QApplication.translate("Dialog", "rings and slices", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("Dialog", "rings", None, -1))
-        self.ringslineedit.setText(QtWidgets.QApplication.translate("Dialog", "10", None, -1))
+        self.ringslineedit.setProperty("text", QtWidgets.QApplication.translate("Dialog", "10", None, -1))
         self.label_2.setText(QtWidgets.QApplication.translate("Dialog", "slices", None, -1))
-        self.sliceslineedit.setText(QtWidgets.QApplication.translate("Dialog", "10", None, -1))
+        self.sliceslineedit.setProperty("text", QtWidgets.QApplication.translate("Dialog", "10", None, -1))
         self.pushButton.setText(QtWidgets.QApplication.translate("Dialog", "Add lots of cylinders", None, -1))
 

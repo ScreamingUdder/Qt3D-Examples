@@ -3,8 +3,8 @@
 # Form implementation generated from reading ui file 'cyldialog.ui',
 # licensing of 'cyldialog.ui' applies.
 #
-# Created: Fri May 31 14:34:42 2019
-#      by: pyside2-uic  running on PySide2 5.12.1
+# Created: Thu Jun 13 12:42:40 2019
+#      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -33,28 +33,28 @@ class Ui_cyldialog(object):
         self.label = QtWidgets.QLabel(self.groupBox)
         self.label.setObjectName("label")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
-        self.radiusLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.radiusLineEdit = QtWidgets.QSpinBox(self.groupBox)
         self.radiusLineEdit.setObjectName("radiusLineEdit")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.radiusLineEdit)
         self.label_2 = QtWidgets.QLabel(self.groupBox)
         self.label_2.setObjectName("label_2")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
-        self.lengthLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.lengthLineEdit = QtWidgets.QSpinBox(self.groupBox)
         self.lengthLineEdit.setObjectName("lengthLineEdit")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lengthLineEdit)
         self.pushButton = QtWidgets.QPushButton(self.groupBox)
         self.pushButton.setObjectName("pushButton")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.pushButton)
-        self.xLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.xLineEdit = QtWidgets.QSpinBox(self.groupBox)
         self.xLineEdit.setObjectName("xLineEdit")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.xLineEdit)
         self.label_3 = QtWidgets.QLabel(self.groupBox)
         self.label_3.setObjectName("label_3")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
-        self.yLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.yLineEdit = QtWidgets.QSpinBox(self.groupBox)
         self.yLineEdit.setObjectName("yLineEdit")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.yLineEdit)
-        self.zLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.zLineEdit = QtWidgets.QSpinBox(self.groupBox)
         self.zLineEdit.setObjectName("zLineEdit")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.zLineEdit)
         self.label_4 = QtWidgets.QLabel(self.groupBox)

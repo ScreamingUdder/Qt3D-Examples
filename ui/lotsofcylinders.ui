@@ -40,9 +40,12 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="ringslineedit">
-         <property name="text">
+        <widget class="QSpinBox" name="ringslineedit">
+         <property name="text" stdset="0">
           <string>10</string>
+         </property>
+         <property name="value">
+          <number>10</number>
          </property>
         </widget>
        </item>
@@ -54,9 +57,12 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="sliceslineedit">
-         <property name="text">
+        <widget class="QSpinBox" name="sliceslineedit">
+         <property name="text" stdset="0">
           <string>10</string>
+         </property>
+         <property name="value">
+          <number>10</number>
          </property>
         </widget>
        </item>
