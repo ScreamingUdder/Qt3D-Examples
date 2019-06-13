@@ -79,7 +79,7 @@ class SphereWindow(Qt3DExtras.Qt3DWindow):
         # Material
         self.material = Qt3DExtras.QPhongMaterial(self.rootEntity)
 
-    def add_sphere(self, radius, x, y, z, rings=20, slices=20):
+    def add_sphere(self, radius, x, y, z, rings=10, slices=10):
 
         sphereEntity = Qt3DCore.QEntity(self.rootEntity)
 
